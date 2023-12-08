@@ -28,10 +28,32 @@ const userEmail = document.querySelector(".user-email-input");
 const userPw = document.querySelector(".user-password-input");
 const loginBtn = document.querySelector(".btn-login");
 
+// 이메일, 비밀번호 유효성 여부나타내는 상태 변수
+let isEmailValid = false;
+let isPwValid = false;
+
+// 상태 변수 업데이트
+function updateState() {
+  isEmailValid = emailReg(userEmail.value);
+  isPwValid = pwReg(userPw.value);
+}
+
+// 폼의 유효성 체크
+function isFormValid() {
+  return isEmailValid && isPwValid;
+}
+
 loginBtn.addEventListener("click", (e) => {
   e.preventDefault();
 
-  if (userEmail.value === user.id && userPw.value === user.pw) {
+  updateState();
+
+  // 폼 유효 && 입력한 이메일 && 입력한 비밀번호
+  if (
+    isFormValid() &&
+    userEmail.value === user.id &&
+    userPw.value === user.pw
+  ) {
     window.location.href = "welcome.html";
   } else {
     alert(" 아이디 또는 비밀번호를 잘못 입력했습니다.");
