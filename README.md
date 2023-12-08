@@ -1,4 +1,4 @@
 # js-homework
 
-🖤 Mission - 01 
-![화면 기록 2023-12-09 오전 12 13 34](https://github.com/dannxnni/js-homework/assets/132893321/f624a72a-0189-4419-bb72-82b62be9642e)
+🖤Mission - 01 
+![ezgif com-video-to-gif](https://github.com/dannxnni/js-homework/assets/132893321/56d67b31-0821-4e62-b95e-d26f11d3cce6)
