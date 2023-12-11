@@ -121,13 +121,17 @@ function handleLogin(e) {
   e.preventDefault(); // 기본 동작 차단
 
   if (emailPass && pwPass) {
-    const id = emailInput.value;
-    const pw = pwInput.value;
-    const getUserId = user.id;
-    const getUserPw = user.pw;
-
-    if (id === getUserId && pw === getUserPw) {
-      window.location.href = "welcome.html";
+    try {
+      const id = emailInput.value;
+      const pw = pwInput.value;
+      const getUserId = user.id;  // 비동기 => 1s
+      const getUserPw = user.pw;  // 비동기 => 1s
+  
+      if (id === getUserId && pw === getUserPw) {
+        window.location.href = "welcome.html";
+      }
+    } catch(e) {
+      console.log("해당 유저의 정보를 가져오지 못했습니다.")
     }
   } else {
     // alert("ERROR");
