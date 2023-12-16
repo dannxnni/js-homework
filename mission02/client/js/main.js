@@ -24,7 +24,7 @@ function setBgColor(target) {
 
   document.body.style.background = `linear-gradient(to bottom, ${
     data[idx - 1].color[0]
-  }, ${data[idx - 1].color[1]}, #000)`;
+  }, ${data[idx - 1].color[1]})`;
 }
 
 function setImage(target) {
